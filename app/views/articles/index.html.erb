@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<%= render 'navbar' %>
+
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="text-center">
+
+        <% @articles.each do |article| %>
+        <h2><%= article.title %></h2>
+        <p><%= article.content %></p>
+
+        <%= link_to "Edit", edit_article_path(article) %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Add New Article", new_article_path %>
+
+
+</body>
+</html>

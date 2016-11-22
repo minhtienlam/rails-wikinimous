@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<%= render 'navbar' %>
+
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="text-center">
+
+
+        <h2><%= @article.title %></h2>
+        <p><%= @article.content %></p>
+        <%= link_to "List of Article", articles_path %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
